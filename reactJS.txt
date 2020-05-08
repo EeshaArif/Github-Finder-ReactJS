@@ -17,6 +17,8 @@ class <classname>{
 create-react-app react-app
 react-app\ npm start
 
+ctrl+d *2/3 - to change same words at diff locations at once
+
 imrc
 cc
 shortcuts to import react and create class respectively
