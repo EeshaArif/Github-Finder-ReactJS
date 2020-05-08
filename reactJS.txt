@@ -21,4 +21,6 @@ imrc
 cc
 shortcuts to import react and create class respectively
 
-<React.fragment></React.fragment> // No double divs
+<React.Fragment></React.Fragment> // No double divs
+
+{} - Any valid js expression  this.state.<var>
