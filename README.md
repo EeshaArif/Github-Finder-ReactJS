@@ -3,6 +3,11 @@ reacts to state change and updates the DOM
 
 // It just renders the view and makes sure the view is in sync with the state
 
+`create-react-app react-app`
+
+`react-app\ npm start`
+
+
 #### Every Component:
 ```
 class <classname>{
@@ -17,8 +22,6 @@ class <classname>{
 }
 ```
 
-- `create-react-app react-app`
-- `react-app\ npm start`
 
 ctrl+d *2/3 - to change same words at diff locations at once
 
@@ -88,8 +91,8 @@ const { street:street1 } = address; // alias
 ```
 ### Spread Operator
 ```
-const first = [1,2,3]
-const second =[4,5,6]
+const first = [1,2,3];
+const second =[4,5,6];
 // combine two arrays
 const combined = first.concat(second);
 const combined = [...first, 'a', ...second, 'b']
