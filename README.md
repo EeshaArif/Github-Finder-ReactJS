@@ -23,13 +23,12 @@ class <classname>{
 ```
 
 
-ctrl+d *2/3 - to change same words at diff locations at once
+- ctrl+d *2-3 -> to change same words at diff locations at once
+- imrc -> shortcut to import react
+- cc -> shortcut to create class
 
-imrc
-cc
-shortcuts to import react and create class respectively
 
-<React.Fragment></React.Fragment> // No double divs
+`<React.Fragment></React.Fragment> // No double divs`
 
 {} - Any valid js expression  this.state.<var>
 
