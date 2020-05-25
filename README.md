@@ -146,7 +146,7 @@ const teacher = new Teacher('name','degree');
 ### Modules (split the code in multiple files)
 ```
 // The objects/classes are private by default
-// to make it public 
+// To make it public, use 'export' keyword 
 import { Person } from './person'; // person.js
 export class Teacher extends Person{}
 ```
