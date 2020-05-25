@@ -107,3 +107,40 @@ const combined = {...first,...second,location:"Pakistan"};
 // clone object
 const clone = {...first};
 ```
+### Classes
+```
+const person = {
+name: 'Eesha',
+walk() {
+console.log("walk");
+}
+};
+```
+```
+class Person{
+  constructor(name){
+    this.name= name;
+  }
+walk(){
+   console.log("walk");
+  }
+}
+
+const person = new Person('Eesha');
+```
+#### Inheritance
+
+```
+class Teacher extends Person{
+ constructor(name,degree){
+   super(name);
+   this.degree = degree;
+ }
+ teach(){
+   console.log("teach")
+  }
+}
+
+const teacher = new Teacher('name','degree');
+```
+
