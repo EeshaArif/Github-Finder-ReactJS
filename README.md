@@ -69,7 +69,7 @@ const activeJobs = jobs.filter(jobs => job.isActive);
 const items = colors.map(function(color){return '<li>'+color+</li>; });
 const items = colors.map(color => '<li>'+color+'</li>');
 const items = colors.map(color => `<li>${color}<\li>`);
-
+```
 ### Object destructuring 
 ```
 const address = {
