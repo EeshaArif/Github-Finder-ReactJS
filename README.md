@@ -32,7 +32,9 @@ shortcuts to import react and create class respectively
 
 ## JavaScript
 var - function 
+
 let - block
+
 const - block
 
 every function in js is an object
