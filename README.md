@@ -86,5 +86,21 @@ const country1 = address.country;
 const {street, city, country} = address;
 const { street:street1 } = address; // alias
 ```
+### Spread Operator
 ```
-
+const first = [1,2,3]
+const second =[4,5,6]
+// combine two arrays
+const combined = first.concat(second);
+const combined = [...first, 'a', ...second, 'b']
+// clone the array
+const clone = [..first];
+```
+```
+const first = { name: 'Eesha' };
+const second ={ job: 'Student'};
+// combine two objects
+const combined = {...first,...second,location:"Pakistan"};
+// clone object
+const clone = {...first};
+```
