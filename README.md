@@ -150,4 +150,11 @@ const teacher = new Teacher('name','degree');
 import { Person } from './person'; // person.js
 export class Teacher extends Person{}
 ```
+### Named and default exports
+- ctrl + space - intellisense
+```
+// Default (export default class <class> {} ) -> import ... from './';
+// Named -> import {...} from './';
+```
+
 
