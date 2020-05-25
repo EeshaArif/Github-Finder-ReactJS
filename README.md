@@ -26,6 +26,8 @@ class <classname>{
 - ctrl+d *2-3 -> to change same words at diff locations at once
 - imrc -> shortcut to import react
 - cc -> shortcut to create class
+- ctrl + space -> intellisense
+- selected code + ctrl + down -> move entire selected code downwards
 
 
 `<React.Fragment></React.Fragment> // No double divs`
@@ -150,7 +152,7 @@ import { Person } from './person'; // person.js
 export class Teacher extends Person{}
 ```
 ### Named and default exports
-- ctrl + space - intellisense
+
 ```
 // Default (export default class <class> {} ) -> import ... from './';
 // Named -> import {...} from './';
