@@ -26,3 +26,25 @@ shortcuts to import react and create class respectively
 <React.Fragment></React.Fragment> // No double divs
 
 {} - Any valid js expression  this.state.<var>
+
+var - function 
+let - block
+const - block
+
+every function in js is an object
+They have properties and methods... with the bind() menthod we can set the vlue of this permanetly
+
+Arrow Functions:
+const square = function(number) {return number*number}
+const square = number => {return number*number}
+const square = number => number*number 
+
+const jobs = [
+{id: 1, isActive: true },
+{id: 2, isActive: true },
+{id: 3, isActive: false},
+];
+
+const activeJobs = jobs.filter(function(jobs) {return job.isActive});
+const activeJobs = jobs.filter(jobs => job.isActive);
+
