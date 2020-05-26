@@ -7,9 +7,7 @@ class Counter extends Component {
   };
 
   handleIncrement = () => {
-    console.log("Increment Count", this.state.count);
-    // obj.method(); -> returns reference to an object
-    // function(); -> returns reference to the window object
+    this.setState({ count: this.state.count + 1 }); // you have to tell react what has changed
   };
   render() {
     return (
