@@ -14,6 +14,7 @@ class Counter extends Component {
     // Every react component has a property called props
     return (
       <div>
+        {this.props.children}
         <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
         <button
           // just use arrow functions if you want to pass arguments
