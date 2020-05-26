@@ -5,16 +5,12 @@ class Counter extends Component {
     count: 0,
     tags: ["tag1", "tag2", "tag3"],
   };
-  constructor() {
-    super();
-    // this will reference the current object
-    this.handleIncrement = this.handleIncrement.bind(this);
-  }
-  handleIncrement() {
+
+  handleIncrement = () => {
     console.log("Increment Count", this.state.count);
     // obj.method(); -> returns reference to an object
     // function(); -> returns reference to the window object
-  }
+  };
   render() {
     return (
       <React.Fragment>
