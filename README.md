@@ -23,6 +23,16 @@ class <classname>{
 // when you change the state of a component, you get a new react element (object)
 }
 ```
+#### lifecycle hooks
+###### Mount
+1. constructor -> this.state = this.props.something
+2. render -> And render of its children recursively 
+3. componentDidMount -> Ajax calls - setState()
+###### Update
+1. render
+2. componentDidUpdate -> add condition to decide whether to make a new ajax call
+###### Unmount
+1. componentWillUnmount -> any type of cleanup code/storage/memory
 
 
 - ctrl+d *2-3 -> to change same words at diff locations at once
