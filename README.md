@@ -31,6 +31,7 @@ class <classname>{
 - ctrl + space -> intellisense
 - selected code + ctrl + down -> move entire selected code downwards
 - Fn + F2 -> rename 
+- sfc -> shortcut to create stateless functional component
 
 `<React.Fragment></React.Fragment> // No double divs`
 
