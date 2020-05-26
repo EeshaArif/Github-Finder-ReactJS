@@ -3,6 +3,7 @@ reacts to state change and updates the DOM
 
 // It just renders the view and makes sure the view is in sync with the state
 
+// **A component that owns a piece of the state, should be the one modifying it**
 `create-react-app react-app`
 
 `react-app\ npm start`
