@@ -28,7 +28,7 @@ class <classname>{
 - cc -> shortcut to create class
 - ctrl + space -> intellisense
 - selected code + ctrl + down -> move entire selected code downwards
-
+- Fn + F2 -> rename 
 
 `<React.Fragment></React.Fragment> // No double divs`
 
