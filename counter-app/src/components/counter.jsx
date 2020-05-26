@@ -6,15 +6,20 @@ class Counter extends Component {
     tags: ["tag1", "tag2", "tag3"],
   };
 
-  handleIncrement = () => {
+  handleIncrement = (product) => {
+    console.log(product);
     this.setState({ count: this.state.count + 1 }); // you have to tell react what has changed
+  };
+  // A solution to pass argument
+  doHandleIncrement = () => {
+    this.handleIncrement({ id: 1 });
   };
   render() {
     return (
       <React.Fragment>
         <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
         <button
-          onClick={this.handleIncrement}
+          onClick={this.doHandleIncrement}
           className="btn btn-secondary btn-sm"
         >
           Increment
