@@ -52,5 +52,7 @@ static propTypes = {
 
 `import { BrowserRouter as Router, Switch, Route } from "react-router-dom";`
 
+- Keeps state intact
+
 `<a href="/">Home</a>` -> `<Link to='/''>Home</Link>`
 
