@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 class Search extends Component {
   state = {
@@ -10,6 +11,9 @@ class Search extends Component {
     event.preventDefault();
     this.props.searchUsers(this.state.text);
     this.setState({ text: "" });
+  };
+  static propTypes = {
+    searchUsers: PropTypes.func.isRequired, // ptfr <- shortcut
   };
   render() {
     return (
