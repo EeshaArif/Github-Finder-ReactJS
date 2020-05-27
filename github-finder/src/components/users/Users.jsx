@@ -1,6 +1,7 @@
 import React from "react";
 import UserItems from "./UserItems";
 import Spinner from "../../layouts/Spinner";
+import PropTypes from "prop-types";
 
 const Users = ({ users, loading }) => {
   if (loading) {
@@ -14,6 +15,10 @@ const Users = ({ users, loading }) => {
       </div>
     );
   }
+};
+Users.propTypes = {
+  users: PropTypes.array.isRequired, //ptar -> shortcut
+  loading: PropTypes.bool.isRequired,
 };
 const userStyle = {
   display: "grid",
