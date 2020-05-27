@@ -1,68 +1,174 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## ReactJS:
+reacts to state change and updates the DOM
 
-## Available Scripts
+// It just renders the view and makes sure the view is in sync with the state
 
-In the project directory, you can run:
+// **A component that owns a piece of the state, should be the one modifying it**
 
-### `npm start`
+`create-react-app react-app`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+`react-app\ npm start`
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
-### `npm test`
+#### Every Component:
+```
+class <classname>{
+       state = {}; // data you want to display when the component is rendered
+       render() {  // What the component should look like
+      
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   } // Output: React Element (A JS object that maps a DOM object) 
+// It keeps a light weight representation of DOM (A virtual DOM)
 
-### `npm run build`
+// when you change the state of a component, you get a new react element (object)
+}
+```
+#### lifecycle hooks
+###### Mount
+1. constructor -> this.state = this.props.something
+2. render -> And render of its children recursively 
+3. componentDidMount -> Ajax calls - setState()
+###### Update
+1. render
+2. componentDidUpdate -> add condition to decide whether to make a new ajax call
+###### Unmount
+1. componentWillUnmount -> any type of cleanup code/storage/memory
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- ctrl+d *2-3 -> to change same words at diff locations at once
+- imrc -> shortcut to import react
+- cc -> shortcut to create class
+- ctrl + space -> intellisense
+- selected code + ctrl + down -> move entire selected code downwards
+- Fn + F2 -> rename 
+- sfc -> shortcut to create stateless functional component
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+`<React.Fragment></React.Fragment> // No double divs`
 
-### `npm run eject`
+{} - Any valid js expression  this.state.<var>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## JavaScript
+var - function 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+let - block
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+const - block
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+every function in js is an object
+They have properties and methods... with the bind() menthod we can set the vlue of this permanetly
 
-## Learn More
+### Arrow Functions:
+```
+const square = function(number) {return number*number}
+const square = number => {return number*number}
+const square = number => number*number 
+```
+```
+const jobs = [
+{id: 1, isActive: true },
+{id: 2, isActive: true },
+{id: 3, isActive: false},
+];
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+const activeJobs = jobs.filter(function(jobs) {return job.isActive});
+const activeJobs = jobs.filter(jobs => job.isActive);
+```
+// Arrow functions dont rebind the "this" keyword (which is a good thing)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Array.map() (to render list of items)
 
-### Code Splitting
+`const colors = ['red', 'green', 'blue'];`
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+// Takes each item and returns a new item
 
-### Analyzing the Bundle Size
+// It returns a new array
+```
+const items = colors.map(function(color){return '<li>'+color+</li>; });
+const items = colors.map(color => '<li>'+color+'</li>');
+const items = colors.map(color => `<li>${color}<\li>`);
+```
+### Object destructuring 
+```
+const address = {
+street: '',
+city: '',
+country: ''
+};
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+const street1 = address.street;
+const city1 = address.city;
+const country1 = address.country;
+```
+```
+const {street, city, country} = address;
+const { street:street1 } = address; // alias
+```
+### Spread Operator
+```
+const first = [1,2,3];
+const second =[4,5,6];
+// combine two arrays
+const combined = first.concat(second);
+const combined = [...first, 'a', ...second, 'b']
+// clone the array
+const clone = [..first];
+```
+```
+const first = { name: 'Eesha' };
+const second ={ job: 'Student'};
+// combine two objects
+const combined = {...first,...second,location:"Pakistan"};
+// clone object
+const clone = {...first};
+```
+### Classes
+```
+const person = {
+name: 'Eesha',
+walk() {
+console.log("walk");
+}
+};
+```
+```
+class Person{
+  constructor(name){
+    this.name= name;
+  }
+walk(){
+   console.log("walk");
+  }
+}
 
-### Making a Progressive Web App
+const person = new Person('Eesha');
+```
+#### Inheritance
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+```
+class Teacher extends Person{
+ constructor(name,degree){
+   super(name);
+   this.degree = degree;
+ }
+ teach(){
+   console.log("teach")
+  }
+}
 
-### Advanced Configuration
+const teacher = new Teacher('name','degree');
+```
+### Modules (split the code in multiple files)
+```
+// The objects/classes are private by default
+// To make it public, use 'export' keyword 
+import { Person } from './person'; // person.js
+export class Teacher extends Person{}
+```
+### Named and default exports
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+```
+// Default (export default class <class> {} ) -> import ... from './';
+// Named -> import {...} from './';
+```
 
-### Deployment
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
