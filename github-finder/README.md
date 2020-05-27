@@ -2,10 +2,11 @@ To create the files that will actually be deployed
 
 ```npm run build```
 
-// rce -> shortcut to generate class based components
-
-// ptor -> shortcut for PropTypes.object.isRequired
-
+- rce -> shortcut to generate class based components
+- ptor -> shortcut for PropTypes.object.isRequired
+- rafc -> shortcut to create arrow function
+#### Global Variables
+To store global variables in local environment, store them in .env.local
 #### http-request
 http-request + setState() -> in componentDidMount
 
