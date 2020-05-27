@@ -6,7 +6,10 @@ To create the files that will actually be deployed
 
 // ptor -> shortcut for PropTypes.object.isRequired
 
-**http-request in componentDidMount**
+#### http-request
+http-request -> in componentDidMount
+
+``` npm i axios```
 #### jsx-difference-from-html
 - class -> className
 - for -> htmlFor
