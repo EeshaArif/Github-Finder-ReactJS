@@ -20,4 +20,15 @@ static defaultProps = {
 ```
 
 If props will be provided then the provided prop will override the default
+#### Type check -> propTypes
+```import PropTypes from "prop-types";```
+
+Displays warning if wrong type is used
+
+``` 
+static propTypes = {
+    title: PropTypes.string.isRequired,
+    icon: PropTypes.string.isRequired,
+  };
+```
 
