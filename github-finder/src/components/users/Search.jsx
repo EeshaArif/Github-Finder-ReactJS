@@ -9,13 +9,18 @@ class Search extends Component {
     this.setState({ [event.target.name]: event.target.value });
   onSubmit = (event) => {
     event.preventDefault();
-    this.props.searchUsers(this.state.text);
-    this.setState({ text: "" });
+    if (this.state.text === "") {
+      this.props.setAlert("Please enter something", "light");
+    } else {
+      this.props.searchUsers(this.state.text);
+      this.setState({ text: "" });
+    }
   };
   static propTypes = {
     searchUsers: PropTypes.func.isRequired, // ptfr <- shortcut
     clearUsers: PropTypes.func.isRequired,
     showClear: PropTypes.bool.isRequired, // ptbr <- shortcut
+    setAlert: PropTypes.func.isRequired,
   };
   render() {
     const { showClear, clearUsers } = this.props;
