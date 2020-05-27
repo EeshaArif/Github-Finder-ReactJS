@@ -2,6 +2,7 @@ To create the files that will actually be deployed
 
 ```npm run build```
 
+// rce -> shortcut to generate class based components
 #### jsx-difference-from-html
 - class -> className
 - for -> htmlFor
