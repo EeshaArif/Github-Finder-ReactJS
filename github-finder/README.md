@@ -7,9 +7,16 @@ To create the files that will actually be deployed
 // ptor -> shortcut for PropTypes.object.isRequired
 
 #### http-request
-http-request -> in componentDidMount
+http-request + setState() -> in componentDidMount
 
 ``` npm i axios```
+
+```  
+async componentDidMount() {
+    const res = await axios.get("https://api.github.com/users");
+    console.log(res.data);
+  }
+```
 #### jsx-difference-from-html
 - class -> className
 - for -> htmlFor
