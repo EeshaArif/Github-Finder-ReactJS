@@ -47,5 +47,8 @@ static propTypes = {
     icon: PropTypes.string.isRequired,
   };
 ```
+### React Router
+`npm i react-router-dom`
 
+`import { BrowserRouter as Router, Switch, Route } from "react-router-dom";`
 
