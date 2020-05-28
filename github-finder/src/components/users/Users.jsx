@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import UserItems from "./UserItems";
 import Spinner from "../../layouts/Spinner";
-import PropTypes from "prop-types";
 import GithubContext from "../../contexts/github/githubContext";
 
 const Users = () => {
