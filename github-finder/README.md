@@ -63,6 +63,20 @@ Functions that let us hook into react state and lifecycle features from a functi
 
 - useEffect -> lifecycle hooks
 - useReducer -> Without redux
+
+```
+const [text,setText] = useState('');
+const onChange = (event) => setText(event.target.value);
+```
+converted from below
+```
+ state = { text: "" };
+ const onChange = (event) =>
+    this.setState({ [event.target.name]: event.target.value });
+  
+ ```
+ 
+ 
 ### Context
 Removes the centralized state from the root component into a context
 - Context
