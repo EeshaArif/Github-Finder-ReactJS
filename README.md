@@ -1,4 +1,9 @@
 #### Counter-App
-A small counter application to understand the fundamentals of JavaScript and event handlers on the web with reactJS.
+A small counter application to understand the fundamentals and architecture of JavaScript and ReactJS respectively, including the handling of events and lifecycle hooks.
 #### Github Finder
-using context API, refactoring everything to functional component and introduction of hooks (useState - useEffect - useContext - useReducer)
+An application which searches for github users and displays their details from the github api. 
+###### Covering
+- React Router
+- Context API
+- Refactoring to functional components 
+- Working with hooks (useState - useEffect - useContext - useReducer)
