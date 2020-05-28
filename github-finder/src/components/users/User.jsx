@@ -20,6 +20,7 @@ export class User extends Component {
       blog,
       login,
       html_url,
+      company,
       followers,
       following,
       public_repos,
@@ -33,6 +34,58 @@ export class User extends Component {
         <Link to="/" className="btn btn-light">
           Back To Search
         </Link>
+        Hireable:{""}
+        {hireable ? (
+          <i className="fas fa-check text-success" />
+        ) : (
+          <i className="fas fa-times-circle text-danger" />
+        )}
+        <div className="card grid-2">
+          <div className="all-center">
+            <img
+              src={avatar_url}
+              className="round-img"
+              alt=""
+              style={{ width: "150px" }}
+            />
+            <h1>{name}</h1>
+            <p>Location: {location}</p>
+          </div>
+          <div>
+            {bio && (
+              <React.Fragment>
+                <h3>Bio:</h3>
+                <p>{bio}</p>
+              </React.Fragment>
+            )}
+            <a href={html_url} className="btn btn-dark my-1">
+              Visit Github Profile
+            </a>
+            <ul>
+              <li>
+                {login && (
+                  <React.Fragment>
+                    <strong>Username: </strong> {login}
+                  </React.Fragment>
+                )}
+              </li>
+              <li>
+                {company && (
+                  <React.Fragment>
+                    <strong>Company: </strong> {company}
+                  </React.Fragment>
+                )}
+              </li>
+              <li>
+                {blog && (
+                  <React.Fragment>
+                    <strong>Website: </strong> {blog}
+                  </React.Fragment>
+                )}
+              </li>
+            </ul>
+          </div>
+        </div>
       </React.Fragment>
     );
   }
