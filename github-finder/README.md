@@ -56,3 +56,15 @@ static propTypes = {
 
 `<a href="/">Home</a>` -> `<Link to='/''>Home</Link>`
 
+### Hooks
+Functions that let us hook into react state and lifecycle features from a function component
+
+`Import {useState, useEffect} from 'react'`
+
+- useEffect -> lifecycle hooks
+- useReducer -> Without redux
+### Context
+Removes the centralized state from the root component into a context
+- Context
+- State
+- Reducer
