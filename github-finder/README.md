@@ -139,7 +139,6 @@ Removes the centralized state from the root component into a context
 `npm i -g netlify-cli`
 
 - create netlify.toml
-
   `netlify init`
 
 - create build folder
